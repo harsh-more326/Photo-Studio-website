@@ -1,0 +1,266 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Lucida Sans';
+    box-sizing: border-box;
+}
+
+header {
+    font-family: 'Lucida Sans';
+    background: rgb(40, 40, 40);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    height: 80px;
+    vertical-align: middle;
+    position: absolute;
+    left: 15px;
+}
+
+.parallax {
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.content {
+    padding: 2em;
+    text-align: center;
+}
+
+.gallery {
+    column-count: 3;
+    column-gap: 10px;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.lightbox-link {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    break-inside: avoid;
+    transition: transform 0.5s ease;
+    box-sizing: border-box;
+}
+
+.lightbox-link:hover .pic {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.spinner {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 8px solid #000;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.pic {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.4s ease;
+    border-radius: 8px;
+}
+
+.pic.loaded {
+    opacity: 1;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-height: 95%;
+    width: auto;
+    max-width: 700px;
+    transition: transform 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form label {
+    margin: 0.5em 0 0.2em;
+}
+
+.form input,
+.form textarea {
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+.form button {
+    padding: 0.7em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #555;
+}
+.slideshow,
+.slideshow .slides {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.slideshow .slides img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.slideshow .slides img.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+.banner {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%; /* Ensure it takes the full height to center the content */
+    box-sizing: border-box;
+}
+
+.banner h2 {
+    font-family: Libre Baskerville;
+    margin: 0;
+    font-size: 4em;
+}
+
+.banner p {
+    font-family: Libre Baskerville;
+    margin: 0.5em 0 0;
+    font-size: 2.2em;
+}
