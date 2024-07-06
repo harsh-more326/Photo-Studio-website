@@ -1,16 +1,17 @@
 /*----------------------- Default Style -----------------------*/
 body, html {
+    scrollbar-width: none;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    font-family: 'roboto';
+    font-family: 'Bona Nova SC';
     box-sizing: border-box;
 }
 
 header {
-    font-family: 'roboto';
+    font-family: 'Bona Nova SC';
     background: rgb(40, 40, 40);
     color: #fff;
     padding: 10px 0;
@@ -32,6 +33,8 @@ nav ul li {
 }
 
 nav ul li a {
+    padding: 10px;
+    font-size: 1.3em;
     color: #fff;
     text-decoration: none;
 }
@@ -43,7 +46,7 @@ nav ul li a {
     left: 15px;
 }
 
-.parallax {
+.parallax, .parallax-content {
     min-height: 400px;
     background-attachment: fixed;
     background-position: center;
@@ -53,8 +56,10 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 2em;
+    font-size: 1.7em;
     text-align: center;
+    position: relative; /* Ensure relative positioning for inner content */
+    z-index: 1;
 }
 /*----------------------- Home page -----------------------*/
 .banner {
@@ -296,32 +301,83 @@ nav ul li a {
     margin-bottom: 20px;
 }
 /*----------------------- about page -----------------------*/
-.content, .mission, .testimonials {
-    padding: 30px; /* Increased padding */
-    text-align: center;
-}
-.content p, .mission p{
-    font-size: 1.3em; /* Slightly increased font size */
-}
-.mission, .testimonials {
-    background-color: #f4f4f4;
+.about-body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fallback color */
+    color: #f0f0f0;
 }
 
-.testimonials .testimonial {
+.back{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width:100%;
+}
+.content-about {
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(3, 3, 3, 0.5);
+    border-radius: 5px;
+    margin: 10px;
+    position: relative; /* Ensure relative positioning for inner content */
+    z-index: 2; /* Ensure content is above the background */
+}
+
+.content-about .content-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission {
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(3, 3, 3, 0.5);
+    border-radius: 5px;
+    margin: 10px;
+    position: relative; /* Ensure relative positioning for inner content */
+    z-index: 2; /* Ensure content is above the background */
+}
+
+.mission .mission-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonials {
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(3, 3, 3, 0.25);
+    border-radius: 5px;
+    margin: 10px;
+    position: relative; /* Ensure relative positioning for inner content */
+    z-index: 2; /* Ensure content is above the background */
+}
+
+.testimonials .testimonials-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
     margin-bottom: 20px;
     background-color: white;
-    padding: 20px; /* Increased padding */
+    padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(3, 3, 3, 0.678);
 }
 
 .testimonials .testimonial p {
+    color: #000;
     margin: 10px 0;
-    font-size: 1.3em; /* Slightly increased font size */
+    font-size: 1.3em;
 }
 
 /*----------------------- Services page -----------------------*/
-
+.content{
+    background-color: white;
+}
 .services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
