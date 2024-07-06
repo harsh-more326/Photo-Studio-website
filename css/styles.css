@@ -1,4 +1,5 @@
 /*----------------------- Default Style -----------------------*/
+
 body, html {
     scrollbar-width: none;
     margin: 0;
@@ -29,14 +30,22 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 9px;
 }
 
 nav ul li a {
-    padding: 10px;
+    padding: 8px;
     font-size: 1.3em;
     color: #fff;
+    border-radius: 5px;
     text-decoration: none;
+    transition: color 0.3s ease, background-color 0.5s ease; 
+}
+
+nav ul li a:hover {
+    color: #000; 
+    background-color: #fff; 
+    border-radius: 5px;
 }
 
 .logo {
@@ -58,10 +67,12 @@ nav ul li a {
     color: white;
     font-size: 1.7em;
     text-align: center;
-    position: relative; /* Ensure relative positioning for inner content */
+    position: relative;
     z-index: 1;
 }
+
 /*----------------------- Home page -----------------------*/
+
 .banner {
     position: absolute;
     z-index: 2;
@@ -73,7 +84,7 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%; /* Ensure it takes the full height to center the content */
+    height: 100%;
     box-sizing: border-box;
 }
 
@@ -88,7 +99,9 @@ nav ul li a {
     margin: 0.5em 0 0;
     font-size: 2.2em;
 }
+
 /*----------------------- slide show -----------------------*/
+
 .slideshow,
 .slideshow .slides {
     z-index: -1;
@@ -178,6 +191,7 @@ nav ul li a {
 }
 
 /*----------------------- open image-----------------------*/
+
 .modal {
     display: none;
     position: fixed;
@@ -300,11 +314,13 @@ nav ul li a {
 .map-container h2 {
     margin-bottom: 20px;
 }
+
 /*----------------------- about page -----------------------*/
+
 .about-body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Fallback color */
+    background-color: #f0f0f0; 
     color: #f0f0f0;
 }
 
@@ -321,8 +337,8 @@ nav ul li a {
     background-color: rgba(3, 3, 3, 0.5);
     border-radius: 5px;
     margin: 10px;
-    position: relative; /* Ensure relative positioning for inner content */
-    z-index: 2; /* Ensure content is above the background */
+    position: relative; 
+    z-index: 2; 
 }
 
 .content-about .content-inner {
@@ -336,8 +352,8 @@ nav ul li a {
     background-color: rgba(3, 3, 3, 0.5);
     border-radius: 5px;
     margin: 10px;
-    position: relative; /* Ensure relative positioning for inner content */
-    z-index: 2; /* Ensure content is above the background */
+    position: relative; 
+    z-index: 2; 
 }
 
 .mission .mission-inner {
@@ -351,8 +367,8 @@ nav ul li a {
     background-color: rgba(3, 3, 3, 0.25);
     border-radius: 5px;
     margin: 10px;
-    position: relative; /* Ensure relative positioning for inner content */
-    z-index: 2; /* Ensure content is above the background */
+    position: relative; 
+    z-index: 2; 
 }
 
 .testimonials .testimonials-inner {
@@ -375,6 +391,7 @@ nav ul li a {
 }
 
 /*----------------------- Services page -----------------------*/
+
 .content{
     background-color: white;
 }
@@ -386,7 +403,7 @@ nav ul li a {
 
 .service-link {
     text-decoration: none;
-    color: inherit; /* Ensures text color doesn't change on link */
+    color: inherit; 
 }
 
 .service-item {
